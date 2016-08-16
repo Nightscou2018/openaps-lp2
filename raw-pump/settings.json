@@ -1,12 +1,12 @@
 {
-  "low_reservoir_warn_point": 48, 
+  "low_reservoir_warn_point": 25, 
   "keypad_lock_status": 0, 
   "maxBasal": 4.0, 
   "temp_basal": {
     "percent": 100, 
     "type": "Units/hour"
   }, 
-  "low_reservoir_warn_type": 1, 
+  "low_reservoir_warn_type": 0, 
   "insulinConcentration": 50, 
   "audio_bolus_enable": true, 
   "variable_bolus_enable": false, 
@@ -15,7 +15,7 @@
     "mode": 2
   }, 
   "rf_enable": false, 
-  "auto_off_duration_hrs": 12, 
+  "auto_off_duration_hrs": 14, 
   "block_enable": false, 
   "timeformat": 160, 
   "insulin_action_curve": 4, 
