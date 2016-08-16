@@ -1,5 +1,16 @@
 [
   {
+    "_type": "BasalProfileStart", 
+    "_description": "BasalProfileStart 2016-08-15T19:00:54 head[2], body[3] op[0x7b]", 
+    "timestamp": "2016-08-15T19:00:54-07:00", 
+    "_body": "241f00", 
+    "profile_index": 5, 
+    "_head": "7b05", 
+    "rate": 0.775, 
+    "offset": 64800000, 
+    "_date": "b600130f10"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "_description": "TempBasalDuration 2016-08-15T18:30:54 head[2], body[0] op[0x16]", 
     "timestamp": "2016-08-15T18:30:54-07:00", 
@@ -296,60 +307,5 @@
     "_head": "330a", 
     "rate": 0.25, 
     "_date": "b7370f4f10"
-  }, 
-  {
-    "_type": "Bolus", 
-    "_description": "Bolus 2016-08-15T14:33:55 head[8], body[0] op[0x01]", 
-    "timestamp": "2016-08-15T14:33:55-07:00", 
-    "_body": "", 
-    "appended": [
-      {
-        "_type": "UnabsorbedInsulinBolus", 
-        "_description": "UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]", 
-        "_body": "", 
-        "_head": "5c05179d04", 
-        "data": [
-          {
-            "amount": 0.575, 
-            "age": 157
-          }
-        ], 
-        "_date": ""
-      }
-    ], 
-    "programmed": 1.4, 
-    "duration": 0, 
-    "amount": 1.4, 
-    "unabsorbed": 0.15, 
-    "_head": "0100380038000600", 
-    "type": "normal", 
-    "_date": "b7212e0f10"
-  }, 
-  {
-    "_type": "BolusWizard", 
-    "bg": 155, 
-    "_description": "BolusWizard 2016-08-15T14:33:54 head[2], body[15] op[0x5b]", 
-    "timestamp": "2016-08-15T14:33:54-07:00", 
-    "_body": "0f50007850820c0032000006003882", 
-    "carb_input": 15, 
-    "bg_target_high": 130, 
-    "sensitivity": 80, 
-    "carb_ratio": 12.0, 
-    "food_estimate": 1.25, 
-    "unabsorbed_insulin_total": 0.15, 
-    "correction_estimate": 0.3, 
-    "bg_target_low": 130, 
-    "_head": "5b9b", 
-    "bolus_estimate": 1.4, 
-    "_date": "b6210e0f10"
-  }, 
-  {
-    "_type": "CalBGForPH", 
-    "_description": "CalBGForPH 2016-08-15T14:33:40 head[2], body[0] op[0x0a]", 
-    "timestamp": "2016-08-15T14:33:40-07:00", 
-    "_body": "", 
-    "_head": "0a9b", 
-    "amount": 155, 
-    "_date": "a8212e0f10"
   }
 ]
