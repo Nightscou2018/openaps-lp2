@@ -1,5 +1,78 @@
 [
   {
+    "_type": "Bolus", 
+    "_description": "Bolus 2016-08-15T18:18:30 head[8], body[0] op[0x01]", 
+    "timestamp": "2016-08-15T18:18:30-07:00", 
+    "_body": "", 
+    "appended": [
+      {
+        "_type": "UnabsorbedInsulinBolus", 
+        "_description": "UnabsorbedInsulinBolus unknown head[11], body[0] op[0x5c]", 
+        "_body": "", 
+        "_head": "5c0b132a0438e804177e14", 
+        "data": [
+          {
+            "amount": 0.475, 
+            "age": 42
+          }, 
+          {
+            "amount": 1.4, 
+            "age": 232
+          }, 
+          {
+            "amount": 0.575, 
+            "age": 382
+          }
+        ], 
+        "_date": ""
+      }
+    ], 
+    "programmed": 0.5, 
+    "duration": 0, 
+    "amount": 0.5, 
+    "unabsorbed": 0.525, 
+    "_head": "0100140014001500", 
+    "type": "normal", 
+    "_date": "9e12320f10"
+  }, 
+  {
+    "_type": "BolusWizard", 
+    "bg": 181, 
+    "_description": "BolusWizard 2016-08-15T18:18:30 head[2], body[15] op[0x5b]", 
+    "timestamp": "2016-08-15T18:18:30-07:00", 
+    "_body": "055000785082190010000015001482", 
+    "carb_input": 5, 
+    "bg_target_high": 130, 
+    "sensitivity": 80, 
+    "carb_ratio": 12.0, 
+    "food_estimate": 0.4, 
+    "unabsorbed_insulin_total": 0.525, 
+    "correction_estimate": 0.625, 
+    "bg_target_low": 130, 
+    "_head": "5bb5", 
+    "bolus_estimate": 0.5, 
+    "_date": "9e12120f10"
+  }, 
+  {
+    "_type": "BGReceived", 
+    "_description": "BGReceived 2016-08-15T18:16:41 head[2], body[3] op[0x3f]", 
+    "timestamp": "2016-08-15T18:16:41-07:00", 
+    "_body": "c58c6e", 
+    "_head": "3f16", 
+    "amount": 181, 
+    "link": "c58c6e", 
+    "_date": "a910b26f10"
+  }, 
+  {
+    "_type": "CalBGForPH", 
+    "_description": "CalBGForPH 2016-08-15T18:16:41 head[2], body[0] op[0x0a]", 
+    "timestamp": "2016-08-15T18:16:41-07:00", 
+    "_body": "", 
+    "_head": "0ab5", 
+    "amount": 181, 
+    "_date": "a910326f10"
+  }, 
+  {
     "_type": "BasalProfileStart", 
     "_description": "BasalProfileStart 2016-08-15T18:00:00 head[2], body[3] op[0x7b]", 
     "timestamp": "2016-08-15T18:00:00-07:00", 
