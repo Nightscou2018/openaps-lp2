@@ -1,15 +1,15 @@
 [
   {
-    "_type": "AlarmPump", 
-    "_description": "AlarmPump 2016-08-16T09:50:00 head[4], body[0] op[0x06]", 
-    "notes": "AlarmPump 523 ", 
-    "timestamp": "2016-08-16T09:50:00-07:00", 
+    "_type": "ClearAlarm", 
+    "_description": "ClearAlarm 2016-08-16T09:55:02 head[2], body[0] op[0x0c]", 
+    "notes": "ClearAlarm 523 ", 
+    "timestamp": "2016-08-16T09:55:02-07:00", 
     "_body": "", 
-    "_head": "060608d9", 
+    "_head": "0c06", 
     "enteredBy": "openaps://medtronic/523", 
-    "medtronic": "mm://openaps/mm-format-ns-treatments/AlarmPump", 
+    "medtronic": "mm://openaps/mm-format-ns-treatments/ClearAlarm", 
     "eventType": "Note", 
-    "created_at": "2016-08-16T09:50:00-07:00", 
-    "_date": "803249b010"
+    "created_at": "2016-08-16T09:55:02-07:00", 
+    "_date": "8237091010"
   }
 ]
