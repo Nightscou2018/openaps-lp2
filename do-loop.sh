@@ -42,17 +42,17 @@ else
 	fi
 
 	# Simple loop
-	openaps do-everything |& logger -t do-everything
+	# openaps do-everything |& logger -t do-everything
 
         # Main loop
-	# openaps gather-clean-data |& logger -t do-loop-gather
-        # { openaps do-oref0 || error_exit "do-oref0"; } 2>&1 > >(logger -t do-loop-predict)
-        # { openaps enact-oref0 || error_exit "enact-oref0"; } 2>&1 > >(logger -t do-loop-enact)
+	openaps gather-clean-data |& logger -t do-loop-gather
+        { openaps do-oref0 || error_exit "do-oref0"; } 2>&1 > >(logger -t do-loop-predict)
+        { openaps enact-oref0 || error_exit "enact-oref0"; } 2>&1 > >(logger -t do-loop-enact)
 
 	# Update nightscout
-	# { openaps get-basal-status || error_exit "get-pump-updates"; } 2>&1 > >(logger -t do-loop-status)
-	# { openaps upload-treatments || error_exit "upload-treatments"; } 2>&1 > >(logger -t do-loop-status)
-	# { openaps upload-status || error_exit "upload-status"; } 2>&1 > >(logger -t do-loop-status)
+	{ openaps get-basal-status || error_exit "get-pump-updates"; } 2>&1 > >(logger -t do-loop-status)
+	{ openaps upload-treatments || error_exit "upload-treatments"; } 2>&1 > >(logger -t do-loop-status)
+	{ openaps upload-status || error_exit "upload-status"; } 2>&1 > >(logger -t do-loop-status)
 fi
 
 END=`date +%s`
