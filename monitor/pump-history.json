@@ -1,5 +1,60 @@
 [
   {
+    "_type": "Bolus", 
+    "_description": "Bolus 2016-08-16T13:52:43 head[8], body[0] op[0x01]", 
+    "timestamp": "2016-08-16T13:52:43-07:00", 
+    "_body": "", 
+    "appended": [
+      {
+        "_type": "UnabsorbedInsulinBolus", 
+        "_description": "UnabsorbedInsulinBolus unknown head[5], body[0] op[0x5c]", 
+        "_body": "", 
+        "_head": "5c05229c04", 
+        "data": [
+          {
+            "amount": 0.85, 
+            "age": 156
+          }
+        ], 
+        "_date": ""
+      }
+    ], 
+    "programmed": 0.625, 
+    "duration": 0, 
+    "amount": 0.625, 
+    "unabsorbed": 0.225, 
+    "_head": "0100190019000900", 
+    "type": "normal", 
+    "_date": "ab342d1010"
+  }, 
+  {
+    "_type": "BolusWizard", 
+    "bg": 199, 
+    "_description": "BolusWizard 2016-08-16T13:52:43 head[2], body[15] op[0x5b]", 
+    "timestamp": "2016-08-16T13:52:43-07:00", 
+    "_body": "005000785082220000000009001982", 
+    "carb_input": 0, 
+    "bg_target_high": 130, 
+    "sensitivity": 80, 
+    "carb_ratio": 12.0, 
+    "food_estimate": 0.0, 
+    "unabsorbed_insulin_total": 0.225, 
+    "correction_estimate": 0.85, 
+    "bg_target_low": 130, 
+    "_head": "5bc7", 
+    "bolus_estimate": 0.625, 
+    "_date": "ab340d1010"
+  }, 
+  {
+    "_type": "CalBGForPH", 
+    "_description": "CalBGForPH 2016-08-16T13:52:23 head[2], body[0] op[0x0a]", 
+    "timestamp": "2016-08-16T13:52:23-07:00", 
+    "_body": "", 
+    "_head": "0ac7", 
+    "amount": 199, 
+    "_date": "97342d1010"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "_description": "TempBasalDuration 2016-08-16T13:40:55 head[2], body[0] op[0x16]", 
     "timestamp": "2016-08-16T13:40:55-07:00", 
@@ -339,13 +394,5 @@
     "_body": "", 
     "_head": "0c06", 
     "_date": "8237091010"
-  }, 
-  {
-    "_type": "AlarmPump", 
-    "_description": "AlarmPump 2016-08-16T09:50:00 head[4], body[0] op[0x06]", 
-    "timestamp": "2016-08-16T09:50:00-07:00", 
-    "_body": "", 
-    "_head": "060608d9", 
-    "_date": "803249b010"
   }
 ]
