@@ -1,5 +1,30 @@
 [
   {
+    "_type": "LowReservoir", 
+    "_description": "LowReservoir 2016-08-16T10:07:32 head[2], body[0] op[0x34]", 
+    "timestamp": "2016-08-16T10:07:32-07:00", 
+    "_body": "", 
+    "_head": "34c3", 
+    "amount": 19.5, 
+    "_date": "a0070a1010"
+  }, 
+  {
+    "_type": "questionable65", 
+    "_description": "questionable65 2016-08-16T10:07:01 head[2], body[0] op[0x65]", 
+    "timestamp": "2016-08-16T10:07:01-07:00", 
+    "_body": "", 
+    "_head": "6564", 
+    "_date": "81070a1010"
+  }, 
+  {
+    "_type": "SetAutoOff", 
+    "_description": "SetAutoOff 2016-08-16T10:05:51 head[2], body[0] op[0x1b]", 
+    "timestamp": "2016-08-16T10:05:51-07:00", 
+    "_body": "", 
+    "_head": "1b0e", 
+    "_date": "b3050a1010"
+  }, 
+  {
     "_type": "BasalProfileStart", 
     "_description": "BasalProfileStart 2016-08-16T09:55:02 head[2], body[3] op[0x7b]", 
     "timestamp": "2016-08-16T09:55:02-07:00", 
