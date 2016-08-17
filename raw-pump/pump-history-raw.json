@@ -1,5 +1,91 @@
 [
   {
+    "programmed": 0.325, 
+    "_type": "Bolus", 
+    "_description": "Bolus 2016-08-16T21:47:15 head[8], body[0] op[0x01]", 
+    "timestamp": "2016-08-16T21:47:15", 
+    "_body": "", 
+    "appended": [
+      {
+        "_type": "UnabsorbedInsulinBolus", 
+        "_description": "UnabsorbedInsulinBolus unknown head[14], body[0] op[0x5c]", 
+        "data": [
+          {
+            "amount": 0.65, 
+            "age": 31
+          }, 
+          {
+            "amount": 1.4, 
+            "age": 131
+          }, 
+          {
+            "amount": 0.2, 
+            "age": 271
+          }, 
+          {
+            "amount": 0.475, 
+            "age": 391
+          }
+        ], 
+        "_body": "", 
+        "_head": "5c0e1a1f04388304080f14138714", 
+        "_date": ""
+      }
+    ], 
+    "_head": "01000d000d002f00", 
+    "amount": 0.325, 
+    "unabsorbed": 1.175, 
+    "duration": 0, 
+    "type": "normal", 
+    "_date": "8f2f351010"
+  }, 
+  {
+    "_type": "BolusWizard", 
+    "bg": 179, 
+    "bg_target_high": 130, 
+    "_description": "BolusWizard 2016-08-16T21:47:15 head[2], body[15] op[0x5b]", 
+    "timestamp": "2016-08-16T21:47:15", 
+    "_body": "04500078508218000d00002f000d82", 
+    "_head": "5bb3", 
+    "unabsorbed_insulin_total": 1.175, 
+    "correction_estimate": 0.6, 
+    "_date": "8f2f151010", 
+    "bolus_estimate": 0.325, 
+    "bg_target_low": 130, 
+    "carb_ratio": 12.0, 
+    "food_estimate": 0.325, 
+    "carb_input": 4, 
+    "sensitivity": 80
+  }, 
+  {
+    "_type": "TempBasalDuration", 
+    "duration (min)": 30, 
+    "_description": "TempBasalDuration 2016-08-16T21:46:47 head[2], body[0] op[0x16]", 
+    "timestamp": "2016-08-16T21:46:47", 
+    "_body": "", 
+    "_head": "1601", 
+    "_date": "af2e155010"
+  }, 
+  {
+    "_type": "TempBasal", 
+    "temp": "absolute", 
+    "_description": "TempBasal 2016-08-16T21:46:47 head[2], body[1] op[0x33]", 
+    "timestamp": "2016-08-16T21:46:47", 
+    "_body": "00", 
+    "_head": "3320", 
+    "rate": 0.8, 
+    "_date": "af2e155010"
+  }, 
+  {
+    "_type": "CalBGForPH", 
+    "_description": "CalBGForPH 2016-08-16T21:46:46 head[2], body[0] op[0x0a]", 
+    "timestamp": "2016-08-16T21:46:46", 
+    "_body": "", 
+    "_head": "0ab3", 
+    "amount": 179, 
+    "_date": "ae2e351010"
+  }, 
+  {
     "_type": "TempBasalDuration", 
     "duration (min)": 30, 
     "_description": "TempBasalDuration 2016-08-16T21:41:40 head[2], body[0] op[0x16]", 
