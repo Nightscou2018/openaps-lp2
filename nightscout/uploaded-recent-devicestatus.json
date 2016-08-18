@@ -1,47 +1,42 @@
 [
   {
     "device": "openaps://openaps-lp", 
-    "created_at": "2016-08-17T06:18:31.158Z", 
+    "created_at": "2016-08-18T18:25:51.023Z", 
     "pump": {
       "battery": {
         "status": "normal", 
-        "voltage": 1.27
+        "voltage": 1.23
       }, 
       "status": {
-        "status": "error", 
-        "timestamp": "2016-08-17T06:16:10.000Z", 
+        "status": "normal", 
+        "timestamp": "2016-08-18T18:23:37.000Z", 
         "bolusing": false, 
         "suspended": false
       }, 
-      "reservoir": 176.2, 
-      "clock": "2016-08-16T23:15:02"
+      "reservoir": 64.925, 
+      "clock": "2016-08-18T11:22:28"
     }, 
-    "_id": "57b401b72e9e460b00726f06", 
+    "_id": "57b5fdaf43b9e10b007b9aa1", 
     "openaps": {
-      "suggested": {
-        "bg": 167, 
-        "temp": "absolute", 
-        "snoozeBG": 148, 
-        "timestamp": "2016-08-17T06:17:13.000Z", 
-        "reason": "Eventual BG 144>=130, temp 1.125 >~ req 1.13U/hr", 
-        "eventualBG": 144, 
-        "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 20 BGI: -4.64", 
-        "tick": "+2"
-      }, 
+      "suggested": [
+        {
+          "msg": "BG data is too old, or clock set incorrectly Thu Aug 18 2016 11:08:03 GMT-0700 (PDT) vs Thu Aug 18 2016 11:24:39 GMT-0700 (PDT)"
+        }
+      ], 
       "iob": {
-        "netbasalinsulin": -0.15, 
-        "timestamp": "2016-08-17T06:17:01.000Z", 
-        "activity": 0.0116, 
-        "basaliob": 0.021, 
-        "hightempinsulin": 0.15, 
-        "bolussnooze": 0.036, 
-        "iob": 0.532
+        "netbasalinsulin": 0, 
+        "timestamp": "2016-08-18T18:24:27.000Z", 
+        "activity": 0, 
+        "basaliob": 0, 
+        "hightempinsulin": 0, 
+        "bolussnooze": 0, 
+        "iob": 0
       }, 
       "enacted": {
         "bg": 167, 
         "temp": "absolute", 
         "snoozeBG": 148, 
-        "timestamp": "2016-08-17T06:17:25.000Z", 
+        "timestamp": "2016-08-18T18:20:15.000Z", 
         "missing": [
           "duration", 
           "rate"
