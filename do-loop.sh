@@ -10,6 +10,7 @@ function error_exit
 	ELAPSED=$(( $END - $START ))
 	echo "$1" 1>&2
 	logger -t do-loop-error "LOOP FAIL $1"
+	./print-loop-result.sh |& logger -t do-loop-result
 	logger -t do-loop-end "OPENAPS-LP LOOP ERROR EXIT ($ELAPSED seconds)"
         exit 1
 }
@@ -55,6 +56,7 @@ else
 	{ openaps upload-status || error_exit "upload-status"; } 2>&1 > >(logger -t do-loop-status)
 fi
 
+./print-loop-result.sh |& logger -t do-loop-result
 END=`date +%s`
 ELAPSED=$(( $END - $START ))
 logger -t do-loop-end "OPENAPS-LP LOOP SUCCESS ($ELAPSED seconds)"
