@@ -11,24 +11,9 @@
       "bolusing": false, 
       "suspended": false
     }, 
-    "reservoir": 54.3, 
-    "clock": "2016-08-18T22:14:56"
+    "reservoir": 54.3
   }, 
   "openaps": {
-    "suggested": [
-      {
-        "msg": "BG data is too old, or clock set incorrectly Thu Aug 18 2016 21:43:10 GMT-0700 (PDT) vs Thu Aug 18 2016 22:16:46 GMT-0700 (PDT)"
-      }
-    ], 
-    "iob": {
-      "netbasalinsulin": -0.5, 
-      "timestamp": "2016-08-19T05:16:35.000Z", 
-      "activity": 0.0074, 
-      "basaliob": -0.354, 
-      "hightempinsulin": 0.25, 
-      "bolussnooze": 0.019, 
-      "iob": 0.07
-    }, 
     "enacted": {
       "bg": 144, 
       "temp": "absolute", 
