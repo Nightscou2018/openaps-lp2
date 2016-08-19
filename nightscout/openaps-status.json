@@ -12,22 +12,22 @@
       "suspended": false
     }, 
     "reservoir": 58.175, 
-    "clock": "2016-08-18T18:39:58"
+    "clock": "2016-08-18T18:44:56"
   }, 
   "openaps": {
     "suggested": [
       {
-        "msg": "BG data is too old, or clock set incorrectly Thu Aug 18 2016 18:27:58 GMT-0700 (PDT) vs Thu Aug 18 2016 18:41:48 GMT-0700 (PDT)"
+        "msg": "BG data is too old, or clock set incorrectly Thu Aug 18 2016 18:27:58 GMT-0700 (PDT) vs Thu Aug 18 2016 18:46:32 GMT-0700 (PDT)"
       }
     ], 
     "iob": {
-      "netbasalinsulin": -0.6, 
-      "timestamp": "2016-08-19T01:41:36.000Z", 
-      "activity": 0, 
-      "basaliob": -0.398, 
-      "hightempinsulin": 0.15, 
+      "netbasalinsulin": -0.5, 
+      "timestamp": "2016-08-19T01:46:20.000Z", 
+      "activity": -0.0003, 
+      "basaliob": -0.279, 
+      "hightempinsulin": 0.25, 
       "bolussnooze": 0, 
-      "iob": -0.382
+      "iob": -0.269
     }, 
     "enacted": {
       "bg": 115, 
