@@ -2,6 +2,86 @@
   {
     "direction": "Flat", 
     "trend": 4, 
+    "dateString": "2016-08-18T22:22:55-07:00", 
+    "sgv": 140, 
+    "date": 1471584175000, 
+    "device": "share2", 
+    "_id": "57b697e40b12fbe73f0c8ba6", 
+    "type": "sgv"
+  }, 
+  {
+    "direction": "Flat", 
+    "trend": 4, 
+    "dateString": "2016-08-18T22:17:56-07:00", 
+    "sgv": 136, 
+    "date": 1471583876000, 
+    "device": "share2", 
+    "_id": "57b696b80b12fbe73f0c8ba5", 
+    "type": "sgv"
+  }, 
+  {
+    "direction": "Flat", 
+    "trend": 4, 
+    "dateString": "2016-08-18T22:12:59-07:00", 
+    "sgv": 141, 
+    "date": 1471583579000, 
+    "device": "share2", 
+    "_id": "57b6958c0b12fbe73f0c8ba4", 
+    "type": "sgv"
+  }, 
+  {
+    "direction": "Flat", 
+    "trend": 4, 
+    "dateString": "2016-08-18T22:07:57-07:00", 
+    "sgv": 139, 
+    "date": 1471583277000, 
+    "device": "share2", 
+    "_id": "57b694600b12fbe73f0c8ba3", 
+    "type": "sgv"
+  }, 
+  {
+    "direction": "Flat", 
+    "trend": 4, 
+    "dateString": "2016-08-18T22:02:57-07:00", 
+    "sgv": 143, 
+    "date": 1471582977000, 
+    "device": "share2", 
+    "_id": "57b693340b12fbe73f0c8ba2", 
+    "type": "sgv"
+  }, 
+  {
+    "direction": "Flat", 
+    "trend": 4, 
+    "dateString": "2016-08-18T21:57:59-07:00", 
+    "sgv": 140, 
+    "date": 1471582679000, 
+    "device": "share2", 
+    "_id": "57b692080b12fbe73f0c8ba1", 
+    "type": "sgv"
+  }, 
+  {
+    "direction": "Flat", 
+    "trend": 4, 
+    "dateString": "2016-08-18T21:52:58-07:00", 
+    "sgv": 144, 
+    "date": 1471582378000, 
+    "device": "share2", 
+    "_id": "57b690dc0b12fbe73f0c8ba0", 
+    "type": "sgv"
+  }, 
+  {
+    "direction": "Flat", 
+    "trend": 4, 
+    "dateString": "2016-08-18T21:48:03-07:00", 
+    "sgv": 144, 
+    "date": 1471582083000, 
+    "device": "share2", 
+    "_id": "57b68fb00b12fbe73f0c8b9f", 
+    "type": "sgv"
+  }, 
+  {
+    "direction": "Flat", 
+    "trend": 4, 
     "dateString": "2016-08-18T21:43:10-07:00", 
     "sgv": 144, 
     "date": 1471581790000, 
@@ -417,86 +497,6 @@
     "date": 1471569180000, 
     "device": "share2", 
     "_id": "57b65d4b0b12fbe73f0c8b63", 
-    "type": "sgv"
-  }, 
-  {
-    "direction": "FortyFiveDown", 
-    "trend": 5, 
-    "dateString": "2016-08-18T18:07:56-07:00", 
-    "sgv": 117, 
-    "date": 1471568876000, 
-    "device": "share2", 
-    "_id": "57b65c1f0b12fbe73f0c8b62", 
-    "type": "sgv"
-  }, 
-  {
-    "direction": "FortyFiveDown", 
-    "trend": 5, 
-    "dateString": "2016-08-18T18:03:00-07:00", 
-    "sgv": 122, 
-    "date": 1471568580000, 
-    "device": "share2", 
-    "_id": "57b65af30b12fbe73f0c8b60", 
-    "type": "sgv"
-  }, 
-  {
-    "direction": "Flat", 
-    "trend": 4, 
-    "dateString": "2016-08-18T17:57:55-07:00", 
-    "sgv": 127, 
-    "date": 1471568275000, 
-    "device": "share2", 
-    "_id": "57b659c70b12fbe73f0c8b5e", 
-    "type": "sgv"
-  }, 
-  {
-    "direction": "Flat", 
-    "trend": 4, 
-    "dateString": "2016-08-18T17:53:03-07:00", 
-    "sgv": 137, 
-    "date": 1471567983000, 
-    "device": "share2", 
-    "_id": "57b6589b0b12fbe73f0c8b5d", 
-    "type": "sgv"
-  }, 
-  {
-    "direction": "Flat", 
-    "trend": 4, 
-    "dateString": "2016-08-18T17:48:15-07:00", 
-    "sgv": 138, 
-    "date": 1471567695000, 
-    "device": "share2", 
-    "_id": "57b6576f0b12fbe73f0c8b5c", 
-    "type": "sgv"
-  }, 
-  {
-    "direction": "Flat", 
-    "trend": 4, 
-    "dateString": "2016-08-18T17:32:56-07:00", 
-    "sgv": 134, 
-    "date": 1471566776000, 
-    "device": "share2", 
-    "_id": "57b653eb0b12fbe73f0c8b59", 
-    "type": "sgv"
-  }, 
-  {
-    "direction": "Flat", 
-    "trend": 4, 
-    "dateString": "2016-08-18T17:27:55-07:00", 
-    "sgv": 125, 
-    "date": 1471566475000, 
-    "device": "share2", 
-    "_id": "57b652bf0b12fbe73f0c8b58", 
-    "type": "sgv"
-  }, 
-  {
-    "direction": "Flat", 
-    "trend": 4, 
-    "dateString": "2016-08-18T17:23:00-07:00", 
-    "sgv": 123, 
-    "date": 1471566180000, 
-    "device": "share2", 
-    "_id": "57b651930b12fbe73f0c8b56", 
     "type": "sgv"
   }
 ]
