@@ -15,21 +15,14 @@
     "clock": "2016-08-19T09:24:58"
   }, 
   "openaps": {
-    "suggested": {
-      "bg": 119, 
-      "temp": "absolute", 
-      "snoozeBG": 123, 
-      "timestamp": "2016-08-19T16:27:18.000Z", 
-      "rate": 0.45, 
-      "reason": "Eventual BG 123<130, setting 0.43U/hr", 
-      "eventualBG": 123, 
-      "duration": 30, 
-      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: -10 BGI: 1.6", 
-      "tick": -2
-    }, 
+    "suggested": [
+      {
+        "msg": "BG data is too old, or clock set incorrectly Fri Aug 19 2016 09:22:55 GMT-0700 (PDT) vs Fri Aug 19 2016 09:33:26 GMT-0700 (PDT)"
+      }
+    ], 
     "iob": {
       "netbasalinsulin": -0.6, 
-      "timestamp": "2016-08-19T16:27:06.000Z", 
+      "timestamp": "2016-08-19T16:33:15.000Z", 
       "activity": -0.004, 
       "basaliob": -0.171, 
       "hightempinsulin": 0.1, 
