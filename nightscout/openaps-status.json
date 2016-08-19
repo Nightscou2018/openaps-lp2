@@ -7,35 +7,55 @@
     }, 
     "status": {
       "status": "normal", 
-      "timestamp": "2016-08-19T07:56:06.000Z", 
+      "timestamp": "2016-08-19T08:01:18.000Z", 
       "bolusing": false, 
       "suspended": false
     }, 
-    "reservoir": 51.675
+    "reservoir": 51.6, 
+    "clock": "2016-08-19T00:59:56"
   }, 
   "openaps": {
+    "suggested": {
+      "bg": 172, 
+      "temp": "absolute", 
+      "snoozeBG": 140, 
+      "timestamp": "2016-08-19T08:02:01.000Z", 
+      "reason": "Eventual BG 140>=130, temp 0.925 >~ req 0.93U/hr", 
+      "eventualBG": 140, 
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 5 BGI: -1.76", 
+      "tick": "+0"
+    }, 
+    "iob": {
+      "netbasalinsulin": 0.6, 
+      "timestamp": "2016-08-19T08:01:49.000Z", 
+      "activity": 0.0044, 
+      "basaliob": 0.458, 
+      "hightempinsulin": 1, 
+      "bolussnooze": 0, 
+      "iob": 0.458
+    }, 
     "enacted": {
-      "bg": 171, 
+      "bg": 172, 
       "temp": "absolute", 
       "missing": [
         "duration", 
         "rate"
       ], 
-      "timestamp": "2016-08-19T07:51:58.000Z", 
+      "timestamp": "2016-08-19T08:02:14.000Z", 
       "snoozeBG": 140, 
       "reason": "Eventual BG 140>=130, temp 0.925 >~ req 0.93U/hr", 
       "eventualBG": 140, 
       "error": "missing required input fields", 
       "input": {
-        "bg": 171, 
+        "bg": 172, 
         "temp": "absolute", 
         "snoozeBG": 140, 
         "reason": "Eventual BG 140>=130, temp 0.925 >~ req 0.93U/hr", 
         "eventualBG": 140, 
-        "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 5 BGI: -1.72", 
+        "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 5 BGI: -1.76", 
         "tick": "+0"
       }, 
-      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 5 BGI: -1.72", 
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 5 BGI: -1.76", 
       "tick": "+0"
     }
   }
