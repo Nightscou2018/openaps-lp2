@@ -1,7 +1,7 @@
 [
   {
     "device": "openaps://openaps-lp", 
-    "created_at": "2016-08-20T20:28:25.624Z", 
+    "created_at": "2016-08-20T20:33:21.565Z", 
     "pump": {
       "battery": {
         "status": "normal", 
@@ -9,18 +9,18 @@
       }, 
       "status": {
         "status": "normal", 
-        "timestamp": "2016-08-20T20:26:08.000Z", 
+        "timestamp": "2016-08-20T20:31:19.000Z", 
         "bolusing": false, 
         "suspended": false
       }, 
-      "reservoir": 26.2, 
-      "clock": "2016-08-20T13:24:56"
+      "reservoir": 26.15, 
+      "clock": "2016-08-20T13:29:54"
     }, 
-    "_id": "57b8bd69fa742c0b008a8c6d", 
+    "_id": "57b8be91fa742c0b008a8c6e", 
     "openaps": {
       "iob": {
         "netbasalinsulin": 0, 
-        "timestamp": "2016-08-20T20:26:37.000Z", 
+        "timestamp": "2016-08-20T20:31:49.000Z", 
         "activity": 0, 
         "basaliob": 0, 
         "hightempinsulin": 0, 
