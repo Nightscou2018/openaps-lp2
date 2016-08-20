@@ -34,7 +34,7 @@ if [ $? -ne 0 ]; then
         exit 1
 fi
 
-cp openaps-lp-assets/pump2.ini openaps-lp2/ |& logger -t git-reclone
+cp openaps-lp-assets/pump2.ini openaps-lp2/pump.ini |& logger -t git-reclone
 cd openaps-lp2
 
 git status > /dev/null
