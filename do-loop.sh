@@ -18,7 +18,8 @@ function error_exit
 logger -t do-loop-start "OPENAPS-LP LOOP START"
 
 cd /home/pi/openaps-lp2
-rm oref0-predict/oref0.json
+rm oref0-predict/oref0.json &>/dev/null
+rm -f monitor/* &>/dev/null
 
 if ! oref0 fix-git-corruption; then
 	logger -t do-loop-start "GIT CORRUPTION FOUND - Attempting fix"
