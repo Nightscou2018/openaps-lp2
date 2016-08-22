@@ -27,15 +27,15 @@ if ! oref0 fix-git-corruption; then
 		error_exit "GIT RECLONE FAIL"
 	fi
 else
-	logger -t do-loop-start "PREFLIGHT"
+	logger -t do-loop-start "LOOP PREFLIGHT"
 	preflight_timeout=$((SECONDS+120))
         until openaps preflight;
         do
                 if [ $SECONDS -gt $preflight_timeout ]; then
-			error_exit "PREFLIGHT TIMEOUT ERROR"
+			error_exit "LOOP PREFLIGHT TIMEOUT ERROR"
 		fi
 		sleep 10
-		logger -t do-loop-start "PREFLIGHT WAITING"
+		logger -t do-loop-start "LOOP PREFLIGHT WAITING"
         done
 
 	# Update if missing
@@ -48,14 +48,14 @@ else
 	# openaps do-everything |& logger -t do-everything
 
         # Main loop
-	( set -exu ; openaps gather-clean-data; ) 2>&1 | logger -t do-loop-gather 
-        { openaps do-oref0 || error_exit "do-oref0"; } 2>&1 > >(logger -t do-loop-predict)
-        { openaps enact-oref0 || error_exit "enact-oref0"; } 2>&1 > >(logger -t do-loop-enact)
+	( set -exu ; openaps gather-clean-data; ) 2>&1 | logger -t do-loop-gather
+	( set -exu ; openaps do-oref0; ) 2>&1 | logger -t do-loop-predict
+        ( set -exu ; openaps enact-oref0; ) 2>&1 | logger -t do-loop-enact
 
 	# Update nightscout
-	{ openaps get-basal-status || error_exit "get-pump-updates"; } 2>&1 > >(logger -t do-loop-status)
-	{ openaps upload-treatments || error_exit "upload-treatments"; } 2>&1 > >(logger -t do-loop-status)
-	{ openaps upload-status || error_exit "upload-status"; } 2>&1 > >(logger -t do-loop-status)
+	( set -exu ; openaps get-basal-status; ) 2>&1 | logger -t do-loop-status
+	( set -exu ; openaps upload-treatments; ) 2>&1 | logger -t do-loop-status
+	( set -exu ; openaps upload-status; ) 2>&1 | logger -t do-loop-status
 fi
 
 ./print-loop-result.sh |& logger -t do-loop-result
