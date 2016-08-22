@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -eu
 SHELL=/bin/bash
 PATH=/home/pi/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
 
@@ -41,21 +41,21 @@ else
 	# Update if missing
 	if ! grep -q maxBasal settings/settings.json; then
         	logger -t do-loop-start "GET PUMP SETTINGS"
-		( set -exu ; openaps get-settings; ) 2>&1 | logger -t do-loop-start
+		( openaps get-settings; ) 2>&1 | logger -t do-loop-start
 	fi
 
 	# Simple loop
 	# openaps do-everything |& logger -t do-everything
 
         # Main loop
-	( set -exu ; openaps gather-clean-data; ) 2>&1 | logger -t do-loop-gather
-	( set -exu ; openaps do-oref0; ) 2>&1 | logger -t do-loop-predict
-        ( set -exu ; openaps enact-oref0; ) 2>&1 | logger -t do-loop-enact
+	( openaps gather-clean-data; ) 2>&1 | logger -t do-loop-gather
+	( openaps do-oref0; ) 2>&1 | logger -t do-loop-predict
+        ( openaps enact-oref0; ) 2>&1 | logger -t do-loop-enact
 
 	# Update nightscout
-	( set -exu ; openaps get-basal-status; ) 2>&1 | logger -t do-loop-status
-	( set -exu ; openaps upload-treatments; ) 2>&1 | logger -t do-loop-status
-	( set -exu ; openaps upload-status; ) 2>&1 | logger -t do-loop-status
+	( openaps get-basal-status; ) 2>&1 | logger -t do-loop-status
+	( openaps upload-treatments; ) 2>&1 | logger -t do-loop-status
+	( openaps upload-status; ) 2>&1 | logger -t do-loop-status
 fi
 
 ./print-loop-result.sh |& logger -t do-loop-result
