@@ -1,19 +1,10 @@
 [
   {
     "device": "openaps://openaps-lp", 
-    "created_at": "2016-08-22T22:55:50.875Z", 
+    "created_at": "2016-08-22T22:58:04.068Z", 
     "pump": {}, 
-    "_id": "57bb82f6081b330b0012e4c0", 
+    "_id": "57bb837c081b330b0012e4c1", 
     "openaps": {
-      "iob": {
-        "netbasalinsulin": 1.55, 
-        "timestamp": "2016-08-22T22:53:54.000Z", 
-        "activity": 0.0175, 
-        "basaliob": 0.577, 
-        "hightempinsulin": 1.75, 
-        "bolussnooze": 2.62, 
-        "iob": 3.505
-      }, 
       "enacted": {
         "bg": 172, 
         "temp": "absolute", 

@@ -2,15 +2,6 @@
   "device": "openaps://openaps-lp", 
   "pump": {}, 
   "openaps": {
-    "iob": {
-      "netbasalinsulin": 1.55, 
-      "timestamp": "2016-08-22T22:53:54.000Z", 
-      "activity": 0.0175, 
-      "basaliob": 0.577, 
-      "hightempinsulin": 1.75, 
-      "bolussnooze": 2.62, 
-      "iob": 3.505
-    }, 
     "enacted": {
       "bg": 172, 
       "temp": "absolute", 
