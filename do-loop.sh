@@ -41,14 +41,14 @@ else
 	# Update if missing
 	if ! grep -q maxBasal settings/settings.json; then
         	logger -t do-loop-start "GET PUMP SETTINGS"
-		{ openaps get-settings || error_exit "get-settings"; } 2>&1 > >(logger -t do-loop-start)
+		( set -exu ; openaps get-settings; ) 2>&1 | logger -t do-loop-start
 	fi
 
 	# Simple loop
 	# openaps do-everything |& logger -t do-everything
 
         # Main loop
-	{ openaps gather-clean-data ; } 2>&1 > >(logger -t do-loop-gather)
+	( set -exu ; openaps gather-clean-data; ) 2>&1 | logger -t do-loop-gather 
         { openaps do-oref0 || error_exit "do-oref0"; } 2>&1 > >(logger -t do-loop-predict)
         { openaps enact-oref0 || error_exit "enact-oref0"; } 2>&1 > >(logger -t do-loop-enact)
 
