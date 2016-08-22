@@ -7,47 +7,56 @@
     }, 
     "status": {
       "status": "normal", 
-      "timestamp": "2016-08-22T14:36:07.000Z", 
+      "timestamp": "2016-08-22T14:41:38.000Z", 
       "bolusing": false, 
       "suspended": false
     }, 
-    "reservoir": 55.6, 
-    "clock": "2016-08-22T07:34:54"
+    "reservoir": 55.4, 
+    "clock": "2016-08-22T07:40:26"
   }, 
   "openaps": {
     "suggested": {
-      "bg": 224, 
+      "bg": 223, 
       "temp": "absolute", 
-      "snoozeBG": 236, 
-      "timestamp": "2016-08-22T14:37:12.000Z", 
-      "rate": 1.95, 
-      "reason": "Eventual BG 23<130, bolus snooze: eventual BG range 23-236; setting current basal of 1.95 as temp. Setting neutral temp basal of 1.95U/hr", 
-      "eventualBG": 23, 
-      "duration": 30, 
-      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 14 BGI: -6.2", 
-      "tick": "+0"
+      "snoozeBG": 227, 
+      "timestamp": "2016-08-22T14:42:40.000Z", 
+      "reason": "Eventual BG 27<130, bolus snooze: eventual BG range 27-227, temp 1.95 ~ req 1.95U/hr", 
+      "eventualBG": 27, 
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 13 BGI: -6.48", 
+      "tick": -1
     }, 
     "iob": {
-      "netbasalinsulin": 1.55, 
-      "timestamp": "2016-08-22T14:37:00.000Z", 
-      "activity": 0.0155, 
-      "basaliob": 0.738, 
-      "hightempinsulin": 1.55, 
-      "bolussnooze": 1.775, 
-      "iob": 2.684
+      "netbasalinsulin": 1.5, 
+      "timestamp": "2016-08-22T14:42:28.000Z", 
+      "activity": 0.0162, 
+      "basaliob": 0.699, 
+      "hightempinsulin": 1.5, 
+      "bolussnooze": 1.668, 
+      "iob": 2.612
     }, 
     "enacted": {
-      "bg": 224, 
+      "bg": 223, 
       "temp": "absolute", 
-      "snoozeBG": 236, 
-      "recieved": true, 
-      "reason": "Eventual BG 23<130, bolus snooze: eventual BG range 23-236; setting current basal of 1.95 as temp. Setting neutral temp basal of 1.95U/hr", 
-      "rate": 1.95, 
-      "eventualBG": 23, 
-      "timestamp": "2016-08-22T14:37:24.000Z", 
-      "duration": 30, 
-      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 14 BGI: -6.2", 
-      "tick": "+0"
+      "missing": [
+        "duration", 
+        "rate"
+      ], 
+      "timestamp": "2016-08-22T14:42:52.000Z", 
+      "snoozeBG": 227, 
+      "reason": "Eventual BG 27<130, bolus snooze: eventual BG range 27-227, temp 1.95 ~ req 1.95U/hr", 
+      "eventualBG": 27, 
+      "error": "missing required input fields", 
+      "input": {
+        "bg": 223, 
+        "temp": "absolute", 
+        "snoozeBG": 227, 
+        "reason": "Eventual BG 27<130, bolus snooze: eventual BG range 27-227, temp 1.95 ~ req 1.95U/hr", 
+        "eventualBG": 27, 
+        "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 13 BGI: -6.48", 
+        "tick": -1
+      }, 
+      "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 80, Target: 130 Deviation: 13 BGI: -6.48", 
+      "tick": -1
     }
   }
 }
