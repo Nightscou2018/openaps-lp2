@@ -1,6 +1,17 @@
 {
   "device": "openaps://openaps-lp", 
   "pump": {
+    "battery": {
+      "status": "normal", 
+      "voltage": 1.22
+    }, 
+    "status": {
+      "status": "normal", 
+      "timestamp": "2016-08-23T08:36:37.000Z", 
+      "bolusing": false, 
+      "suspended": false
+    }, 
+    "reservoir": 2.575, 
     "clock": "2016-08-23T01:35:12"
   }, 
   "openaps": {
