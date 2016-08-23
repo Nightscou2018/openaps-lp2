@@ -1,0 +1,670 @@
+[
+  {
+    "monitor/clock-zoned.json": {
+      "use": "clock",
+      "reporter": "JSON",
+      "astimezone": "False",
+      "date": "None",
+      "adjust": "missing",
+      "input": "monitor/clock.json",
+      "device": "tz",
+      "timezone": ""
+    },
+    "type": "report",
+    "name": "monitor/clock-zoned.json"
+  },
+  {
+    "type": "report",
+    "name": "monitor/glucose-pre.json",
+    "monitor/glucose-pre.json": {
+      "use": "rezone",
+      "reporter": "JSON",
+      "astimezone": "True",
+      "date": "timestamp dateString start_at end_at created_at system_time display_time",
+      "adjust": "missing",
+      "timezone": "",
+      "device": "tz",
+      "input": "nightscout/glucose-raw.json"
+    }
+  },
+  {
+    "type": "report",
+    "name": "model.json",
+    "model.json": {
+      "device": "pump",
+      "use": "model",
+      "reporter": "JSON"
+    }
+  },
+  {
+    "type": "report",
+    "name": "raw-pump/bg_targets_raw.json",
+    "raw-pump/bg_targets_raw.json": {
+      "device": "pump",
+      "use": "read_bg_targets",
+      "reporter": "JSON"
+    }
+  },
+  {
+    "raw-pump/insulin-sensitivities-raw.json": {
+      "device": "pump",
+      "use": "read_insulin_sensitivities",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "raw-pump/insulin-sensitivities-raw.json"
+  },
+  {
+    "type": "report",
+    "name": "settings/insulin-sensitivities.json",
+    "settings/insulin-sensitivities.json": {
+      "device": "units",
+      "to": "mg/dL",
+      "use": "insulin_sensitivities",
+      "input": "raw-pump/insulin-sensitivities-raw.json",
+      "reporter": "JSON"
+    }
+  },
+  {
+    "monitor/temp-basal-status.json": {
+      "device": "pump",
+      "use": "read_temp_basal",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "monitor/temp-basal-status.json"
+  },
+  {
+    "type": "report",
+    "name": "oref0-predict/oref0.json",
+    "oref0-predict/oref0.json": {
+      "use": "shell",
+      "temp-basal": "monitor/temp-basal-status.json",
+      "oref0-iob": "oref0-monitor/iob.json",
+      "reporter": "text",
+      "json_default": "True",
+      "oref0-profile": "oref0-monitor/profile.json",
+      "device": "determine-basal",
+      "remainder": "",
+      "glucose": "monitor/glucose.json"
+    }
+  },
+  {
+    "raw-pump/pump-history-raw.json": {
+      "hours": "4.0",
+      "device": "pump",
+      "use": "iter_pump_hours",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "raw-pump/pump-history-raw.json"
+  },
+  {
+    "monitor/pump-history.json": {
+      "date": "timestamp dateString start_at end_at created_at",
+      "use": "rezone",
+      "adjust": "missing",
+      "reporter": "JSON",
+      "device": "tz",
+      "input": "raw-pump/pump-history-raw.json",
+      "astimezone": "True"
+    },
+    "type": "report",
+    "name": "monitor/pump-history.json"
+  },
+  {
+    "monitor/reservoir.json": {
+      "device": "pump",
+      "use": "reservoir",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "monitor/reservoir.json"
+  },
+  {
+    "type": "report",
+    "name": "monitor/status.json",
+    "monitor/status.json": {
+      "device": "pump",
+      "use": "read_status",
+      "reporter": "JSON"
+    }
+  },
+  {
+    "monitor/battery.json": {
+      "device": "pump",
+      "use": "read_battery_status",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "monitor/battery.json"
+  },
+  {
+    "type": "report",
+    "name": "oref0-enacted/enacted-temp-basal.json",
+    "oref0-enacted/enacted-temp-basal.json": {
+      "device": "pump",
+      "input": "oref0-predict/oref0.json",
+      "use": "set_temp_basal",
+      "reporter": "JSON"
+    }
+  },
+  {
+    "settings/settings.json": {
+      "device": "oref0",
+      "remainder": "copy-fresher raw-pump/settings.json",
+      "use": "shell",
+      "json_default": "True",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "settings/settings.json"
+  },
+  {
+    "raw-pump/settings.json": {
+      "device": "pump",
+      "use": "read_settings",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "raw-pump/settings.json"
+  },
+  {
+    "type": "report",
+    "name": "settings/selected-basal-profile.json",
+    "settings/selected-basal-profile.json": {
+      "device": "oref0",
+      "remainder": "copy-fresher raw-pump/selected-basal-profile.json",
+      "use": "shell",
+      "json_default": "True",
+      "reporter": "JSON"
+    }
+  },
+  {
+    "type": "report",
+    "name": "raw-pump/selected-basal-profile.json",
+    "raw-pump/selected-basal-profile.json": {
+      "device": "pump",
+      "use": "read_selected_basal_profile",
+      "reporter": "JSON"
+    }
+  },
+  {
+    "raw-pump/temp-basal-status.json": {
+      "device": "pump",
+      "use": "read_temp_basal",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "raw-pump/temp-basal-status.json"
+  },
+  {
+    "raw-pump/reservoir.json": {
+      "device": "pump",
+      "use": "reservoir",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "raw-pump/reservoir.json"
+  },
+  {
+    "type": "report",
+    "name": "raw-pump/status.json",
+    "raw-pump/status.json": {
+      "device": "pump",
+      "use": "read_status",
+      "reporter": "JSON"
+    }
+  },
+  {
+    "raw-pump/battery.json": {
+      "device": "pump",
+      "use": "read_battery_status",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "raw-pump/battery.json"
+  },
+  {
+    "type": "report",
+    "name": "oref0-monitor/profile.json",
+    "oref0-monitor/profile.json": {
+      "insulin-sensitivities": "settings/insulin-sensitivities.json",
+      "use": "shell",
+      "settings": "settings/settings.json",
+      "reporter": "text",
+      "json_default": "True",
+      "device": "get-profile",
+      "bg-targets": "settings/bg_targets.json",
+      "basal-profile": "settings/selected-basal-profile.json",
+      "max-iob": "preferences.json",
+      "remainder": ""
+    }
+  },
+  {
+    "type": "report",
+    "name": "oref0-monitor/iob.json",
+    "oref0-monitor/iob.json": {
+      "use": "shell",
+      "clock": "monitor/clock-zoned.json",
+      "reporter": "text",
+      "json_default": "True",
+      "pump-history": "monitor/pump-history.json",
+      "oref0-profile": "oref0-monitor/profile.json",
+      "device": "calculate-iob",
+      "remainder": ""
+    }
+  },
+  {
+    "nightscout/preflight.json": {
+      "oper": "preflight",
+      "use": "shell",
+      "reporter": "JSON",
+      "device": "ns",
+      "remainder": "",
+      "json_default": "True"
+    },
+    "type": "report",
+    "name": "nightscout/preflight.json"
+  },
+  {
+    "type": "report",
+    "name": "nightscout/uploaded.json",
+    "nightscout/uploaded.json": {
+      "oper": "upload-non-empty-treatments",
+      "use": "shell",
+      "reporter": "JSON",
+      "device": "ns",
+      "remainder": "nightscout/recent-treatments.json",
+      "json_default": "True"
+    }
+  },
+  {
+    "nightscout/recent-treatments.json": {
+      "oper": "format-recent-history-treatments",
+      "use": "shell",
+      "reporter": "JSON",
+      "device": "ns",
+      "remainder": "monitor/pump-history.json model.json",
+      "json_default": "True"
+    },
+    "type": "report",
+    "name": "nightscout/recent-treatments.json"
+  },
+  {
+    "type": "report",
+    "name": "nightscout/glucose-raw.json",
+    "nightscout/glucose-raw.json": {
+      "oper": "get",
+      "device": "ns",
+      "use": "shell",
+      "remainder": "entries/sgv.json count=50",
+      "reporter": "JSON"
+    }
+  },
+  {
+    "monitor/glucose-old.json": {
+      "oper": "oref0_glucose",
+      "use": "shell",
+      "reporter": "JSON",
+      "device": "ns",
+      "remainder": "--hours 25.0 --threshold 100",
+      "json_default": "True"
+    },
+    "type": "report",
+    "name": "monitor/glucose-old.json"
+  },
+  {
+    "type": "report",
+    "name": "monitor/upload-status.json",
+    "monitor/upload-status.json": {
+      "oper": "monitor/clock-zoned.json",
+      "suggested": "enact/suggested.json",
+      "use": "shell",
+      "reservoir": "monitor/reservoir.json",
+      "clock": "monitor/clock-zoned.json",
+      "battery": "monitor/battery.json",
+      "reporter": "JSON",
+      "json_default": "True",
+      "status": "monitor/status.json",
+      "device": "ns-status",
+      "remainder": "monitor/clock-zoned.json oref0-monitor/iob.json enact/suggested.json enact/enacted.json monitor/battery.json monitor/reservoir.json monitor/status.json",
+      "iob": "oref0-monitor/iob.json",
+      "enacted": "enact/enacted.json"
+    }
+  },
+  {
+    "nightscout/openaps-status.json": {
+      "device": "ns-status",
+      "remainder": "monitor/clock.json oref0-monitor/iob.json oref0-predict/oref0.json oref0-enacted/enacted-temp-basal.json monitor/battery.json monitor/reservoir.json monitor/status.json",
+      "use": "shell",
+      "json_default": "True",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "nightscout/openaps-status.json"
+  },
+  {
+    "settings/basal_profile.json": {
+      "device": "pump",
+      "use": "read_basal_profile_std",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "settings/basal_profile.json"
+  },
+  {
+    "type": "report",
+    "settings/bg_targets.json": {
+      "device": "units",
+      "to": "mg/dL",
+      "use": "bg_targets",
+      "input": "raw-pump/bg_targets_raw.json",
+      "reporter": "JSON"
+    },
+    "name": "settings/bg_targets.json"
+  },
+  {
+    "monitor/clock.json": {
+      "device": "pump",
+      "use": "read_clock",
+      "reporter": "JSON"
+    },
+    "type": "report",
+    "name": "monitor/clock.json"
+  },
+  {
+    "type": "report",
+    "name": "monitor/openaps-status.json",
+    "monitor/openaps-status.json": {
+      "device": "ns-status",
+      "remainder": "monitor/clock-zoned.json monitor/iob.json enact/suggested.json enact/enacted.json monitor/battery.json monitor/reservoir.json monitor/status.json",
+      "use": "shell",
+      "json_default": "True",
+      "reporter": "JSON"
+    }
+  },
+  {
+    "nightscout/uploaded-recent-devicestatus.json": {
+      "oper": "upload",
+      "use": "shell",
+      "reporter": "JSON",
+      "device": "ns",
+      "remainder": "devicestatus.json nightscout/openaps-status.json",
+      "json_default": "True"
+    },
+    "type": "report",
+    "name": "nightscout/uploaded-recent-devicestatus.json"
+  },
+  {
+    "pump": {
+      "vendor": "mmeowlink.vendors.mmeowlink",
+      "extra": "pump.ini"
+    },
+    "type": "device",
+    "name": "pump",
+    "extra": {
+      "serial": "762459",
+      "port": "/dev/ttyACM0",
+      "radio_type": "subg_rfspy"
+    }
+  },
+  {
+    "ns": {
+      "vendor": "openaps.vendors.process",
+      "extra": "ns.ini"
+    },
+    "type": "device",
+    "name": "ns",
+    "extra": {
+      "fields": "oper",
+      "cmd": "nightscout",
+      "args": "ns https://nightscout-lp.herokuapp.com f636661431500db568bfae7fe937ebec7d0c4a0e"
+    }
+  },
+  {
+    "type": "device",
+    "tz": {
+      "vendor": "openapscontrib.timezones",
+      "extra": "tz.ini"
+    },
+    "name": "tz",
+    "extra": {}
+  },
+  {
+    "extra": {
+      "fields": "",
+      "cmd": "oref0",
+      "args": ""
+    },
+    "type": "device",
+    "name": "oref0",
+    "oref0": {
+      "vendor": "openaps.vendors.process",
+      "extra": "oref0.ini"
+    }
+  },
+  {
+    "extra": {
+      "fields": "glucose pumphistory isf basal_profile profile",
+      "cmd": "oref0",
+      "args": "detect-sensitivity"
+    },
+    "type": "device",
+    "name": "detect-sensitivity",
+    "detect-sensitivity": {
+      "vendor": "openaps.vendors.process",
+      "extra": "detect-sensitivity.ini"
+    }
+  },
+  {
+    "extra": {
+      "fields": "settings bg-targets insulin-sensitivities basal-profile max-iob",
+      "cmd": "oref0",
+      "args": "get-profile"
+    },
+    "type": "device",
+    "name": "get-profile",
+    "get-profile": {
+      "vendor": "openaps.vendors.process",
+      "extra": "get-profile.ini"
+    }
+  },
+  {
+    "type": "device",
+    "calculate-iob": {
+      "vendor": "openaps.vendors.process",
+      "extra": "calculate-iob.ini"
+    },
+    "name": "calculate-iob",
+    "extra": {
+      "fields": "pump-history oref0-profile clock",
+      "cmd": "oref0",
+      "args": "calculate-iob"
+    }
+  },
+  {
+    "determine-basal": {
+      "vendor": "openaps.vendors.process",
+      "extra": "determine-basal.ini"
+    },
+    "type": "device",
+    "name": "determine-basal",
+    "extra": {
+      "fields": "oref0-iob temp-basal glucose oref0-profile",
+      "cmd": "oref0",
+      "args": "determine-basal"
+    }
+  },
+  {
+    "units": {
+      "vendor": "openaps.vendors.units",
+      "extra": "units.ini"
+    },
+    "type": "device",
+    "name": "units",
+    "extra": {}
+  },
+  {
+    "extra": {
+      "fields": "",
+      "cmd": "bash",
+      "args": "-c \"ns-status $*\" --"
+    },
+    "type": "device",
+    "name": "ns-status",
+    "ns-status": {
+      "vendor": "openaps.vendors.process",
+      "extra": "ns-status.ini"
+    }
+  },
+  {
+    "type": "vendor",
+    "name": "mmeowlink.vendors.mmeowlink",
+    "mmeowlink.vendors.mmeowlink": {
+      "path": ".",
+      "module": "mmeowlink.vendors.mmeowlink"
+    }
+  },
+  {
+    "openapscontrib.timezones": {
+      "path": ".",
+      "module": "openapscontrib.timezones"
+    },
+    "type": "vendor",
+    "name": "openapscontrib.timezones"
+  },
+  {
+    "type": "alias",
+    "name": "rm-warmup",
+    "rm-warmup": {
+      "command": "! bash -c \"rm -f monitor/clock.json monitor/clock-zoned.json > /dev/null\""
+    }
+  },
+  {
+    "type": "alias",
+    "name": "warmup",
+    "warmup": {
+      "command": "report invoke monitor/clock.json monitor/clock-zoned.json"
+    }
+  },
+  {
+    "fail-warmup": {
+      "command": "! bash -c \"echo PREFLIGHT FAIL. Invoking sudo oref0-reset-usb && sudo oref0-reset-usb && sleep 30 && openaps warmup && grep -q T monitor/clock.json && echo PREFLIGHT RESET SUCCESS\""
+    },
+    "type": "alias",
+    "name": "fail-warmup"
+  },
+  {
+    "type": "alias",
+    "preflight": {
+      "command": "! bash -c \"echo PREFLIGHT && openaps preflight-ns && openaps rm-warmup 2>&1 >/dev/null && openaps warmup 2>&1 >/dev/null && grep -q T monitor/clock.json && echo PREFLIGHT OK || logger -t do-loop-start \"PREFLIGHT Second warmup\" && sleep 5 && { openaps warmup || openaps fail-warmup }\""
+    },
+    "name": "preflight"
+  },
+  {
+    "type": "alias",
+    "name": "preflight-ns",
+    "preflight-ns": {
+      "command": "! bash -c \"openaps report invoke nightscout/preflight.json && grep -q ^true$ nightscout/preflight.json\""
+    }
+  },
+  {
+    "type": "alias",
+    "name": "monitor-cgm",
+    "monitor-cgm": {
+      "command": "report invoke nightscout/glucose-raw.json monitor/glucose-pre.json"
+    }
+  },
+  {
+    "type": "alias",
+    "name": "monitor-pump-history",
+    "monitor-pump-history": {
+      "command": "report invoke raw-pump/pump-history-raw.json monitor/pump-history.json"
+    }
+  },
+  {
+    "type": "alias",
+    "name": "get-basal-status",
+    "get-basal-status": {
+      "command": "report invoke monitor/temp-basal-status.json"
+    }
+  },
+  {
+    "type": "alias",
+    "name": "get-pump-details",
+    "get-pump-details": {
+      "command": "report invoke monitor/reservoir.json monitor/status.json monitor/battery.json"
+    }
+  },
+  {
+    "type": "alias",
+    "name": "get-settings",
+    "get-settings": {
+      "command": "report invoke raw-pump/bg_targets_raw.json settings/bg_targets.json raw-pump/insulin-sensitivities-raw.json settings/insulin-sensitivities.json raw-pump/selected-basal-profile.json settings/selected-basal-profile.json raw-pump/settings.json settings/settings.json oref0-monitor/profile.json"
+    }
+  },
+  {
+    "type": "alias",
+    "name": "gather-pump-data",
+    "gather-pump-data": {
+      "command": "! bash -c \"openaps get-basal-status && openaps get-pump-details && openaps monitor-pump-history\""
+    }
+  },
+  {
+    "type": "alias",
+    "name": "gather-clean-data",
+    "gather-clean-data": {
+      "command": "! bash -c \"openaps gather-pump-data && openaps get-settings && openaps monitor-cgm && cat monitor/glucose-pre.json | json -e \\\"this.glucose = this.sgv\\\" > monitor/glucose.json\""
+    }
+  },
+  {
+    "type": "alias",
+    "name": "do-oref0",
+    "do-oref0": {
+      "command": "! bash -c \"openaps report invoke oref0-monitor/iob.json && openaps report invoke oref0-predict/oref0.json || echo PREDICT FAILED\""
+    }
+  },
+  {
+    "type": "alias",
+    "name": "enact-oref0",
+    "enact-oref0": {
+      "command": "! bash -c \"openaps report invoke oref0-enacted/enacted-temp-basal.json || echo ENACT FAILED\""
+    }
+  },
+  {
+    "do-everything": {
+      "command": "! bash -c \"oref0 fix-git-corruption && openaps preflight && openaps gather-clean-data && openaps get-settings && openaps do-oref0 && openaps enact-oref0 && sleep 2 && openaps report invoke nightscout/preflight.json && openaps report-nightscout\""
+    },
+    "type": "alias",
+    "name": "do-everything"
+  },
+  {
+    "report-nightscout": {
+      "command": "! bash -c \"openaps report invoke nightscout/recent-treatments.json nightscout/uploaded.json nightscout/openaps-status.json nightscout/uploaded-recent-devicestatus.json || echo NIGHTSCOUT UPLOAD FAILED\""
+    },
+    "type": "alias",
+    "name": "report-nightscout"
+  },
+  {
+    "upload-treatments": {
+      "command": "! bash -c \"openaps report invoke nightscout/recent-treatments.json nightscout/uploaded.json || echo UPLOAD TREATMENTS FAILED\""
+    },
+    "type": "alias",
+    "name": "upload-treatments"
+  },
+  {
+    "type": "alias",
+    "name": "upload-status",
+    "upload-status": {
+      "command": "! bash -c \"openaps report invoke nightscout/openaps-status.json nightscout/uploaded-recent-devicestatus.json || echo UPLOAD STATUS FAILED\""
+    }
+  },
+  {
+    "type": "alias",
+    "name": "export-loop",
+    "export-loop": {
+      "command": "! bash -c \"oref0 export-loop | tee backup/loop-export.json\""
+    }
+  }
+]
