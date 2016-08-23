@@ -14,13 +14,13 @@
     "volume": 2, 
     "mode": 2
   }, 
-  "maxBasal": 4.0, 
+  "maxBasal": 8.0, 
   "insulin_action_curve": 4, 
   "block_enable": false, 
   "selected_pattern": 1, 
   "auto_off_duration_hrs": 14, 
   "audio_bolus_size": 0.1, 
-  "timeformat": 160, 
+  "timeformat": 64, 
   "paradigm_enabled": 1, 
   "maxBolus": 5.0, 
   "patterns_enabled": true
