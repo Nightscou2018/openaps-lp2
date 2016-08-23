@@ -3,31 +3,31 @@
   "pump": {
     "battery": {
       "status": "normal", 
-      "voltage": 1.43
+      "voltage": 1.42
     }, 
     "status": {
       "status": "normal", 
-      "timestamp": "2016-08-23T15:56:07.000Z", 
+      "timestamp": "2016-08-23T16:01:21.000Z", 
       "bolusing": false, 
       "suspended": false
     }, 
-    "reservoir": 104.9, 
-    "clock": "2016-08-23T08:54:54"
+    "reservoir": 104.75, 
+    "clock": "2016-08-23T08:59:54"
   }, 
   "openaps": {
     "suggested": [
       {
-        "msg": "BG data is too old, or clock set incorrectly Tue Aug 23 2016 07:37:45 GMT-0700 (PDT) vs Tue Aug 23 2016 08:57:15 GMT-0700 (PDT)"
+        "msg": "BG data is too old, or clock set incorrectly Tue Aug 23 2016 07:37:45 GMT-0700 (PDT) vs Tue Aug 23 2016 09:02:31 GMT-0700 (PDT)"
       }
     ], 
     "iob": {
       "netbasalinsulin": -1.5, 
-      "timestamp": "2016-08-23T15:57:03.000Z", 
-      "activity": -0.0062, 
-      "basaliob": -0.639, 
+      "timestamp": "2016-08-23T16:02:20.000Z", 
+      "activity": -0.006, 
+      "basaliob": -0.614, 
       "hightempinsulin": 0, 
-      "bolussnooze": 0.673, 
-      "iob": 0.054
+      "bolussnooze": 0.657, 
+      "iob": 0.074
     }, 
     "enacted": {
       "bg": 60, 
