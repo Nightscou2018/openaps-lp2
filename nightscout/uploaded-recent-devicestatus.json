@@ -1,19 +1,22 @@
 [
   {
     "device": "openaps://openaps-lp", 
-    "created_at": "2016-08-23T13:06:18.343Z", 
-    "pump": {}, 
-    "_id": "57bc4a4a6ab3fb3b12d545b1", 
-    "openaps": {
-      "iob": {
-        "netbasalinsulin": -0.95, 
-        "timestamp": "2016-08-23T13:04:10.000Z", 
-        "activity": -0.0031, 
-        "basaliob": -0.876, 
-        "hightempinsulin": 0, 
-        "bolussnooze": 0, 
-        "iob": -0.876
+    "created_at": "2016-08-23T13:09:06.930Z", 
+    "pump": {
+      "battery": {
+        "status": "normal", 
+        "voltage": 1.45
       }, 
+      "status": {
+        "status": "normal", 
+        "timestamp": "2016-08-23T13:06:37.000Z", 
+        "bolusing": false, 
+        "suspended": false
+      }, 
+      "reservoir": 110
+    }, 
+    "_id": "57bc4af21781defb12eac887", 
+    "openaps": {
       "enacted": {
         "bg": 80, 
         "temp": "absolute", 
