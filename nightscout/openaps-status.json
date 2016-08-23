@@ -1,8 +1,6 @@
 {
   "device": "openaps://openaps-lp", 
-  "pump": {
-    "clock": "2016-08-22T22:34:52"
-  }, 
+  "pump": {}, 
   "openaps": {
     "enacted": {
       "bg": 176, 
