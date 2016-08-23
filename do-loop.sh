@@ -39,7 +39,7 @@ else
 	# openaps do-everything |& logger -t do-everything
 
         # Main loop
-	( openaps gather-clean-data && openaps do-oref0 && openaps enact-oref0 && openaps get-basal-status &&openaps upload-treatments && openaps upload-status ) 2>&1 | logger -t do-loop
+	( openaps gather-clean-data && openaps do-oref0 && openaps enact-oref0 && openaps get-basal-status && openaps upload-treatments && openaps upload-status ) 2>&1 | logger -t do-loop
 fi
 
 ./print-loop-result.sh |& logger -t do-loop-result
