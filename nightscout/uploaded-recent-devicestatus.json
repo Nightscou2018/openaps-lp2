@@ -1,0 +1,47 @@
+[
+  {
+    "device": "openaps://openaps-lp", 
+    "created_at": "2016-08-23T01:42:52.559Z", 
+    "pump": {
+      "battery": {
+        "status": "normal", 
+        "voltage": 1.23
+      }, 
+      "status": {
+        "status": "normal", 
+        "timestamp": "2016-08-23T01:41:09.000Z", 
+        "bolusing": false, 
+        "suspended": false
+      }, 
+      "reservoir": 25.325, 
+      "clock": "2016-08-22T18:39:56"
+    }, 
+    "_id": "57bbaa1c081b330b0012e4dd", 
+    "openaps": {
+      "enacted": {
+        "bg": 274, 
+        "temp": "absolute", 
+        "snoozeBG": 202, 
+        "timestamp": "2016-08-23T01:37:21.000Z", 
+        "missing": [
+          "duration", 
+          "rate"
+        ], 
+        "reason": "Eventual BG 195>=130, adj. req. rate:5.8 to maxSafeBasal:4.0, temp 4 >~ req 4.0U/hr", 
+        "eventualBG": 195, 
+        "error": "missing required input fields", 
+        "input": {
+          "bg": 274, 
+          "temp": "absolute", 
+          "snoozeBG": 202, 
+          "reason": "Eventual BG 195>=130, adj. req. rate:5.8 to maxSafeBasal:4.0, temp 4 >~ req 4.0U/hr", 
+          "eventualBG": 195, 
+          "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 130 Deviation: 13 BGI: -4.38", 
+          "tick": "+0"
+        }, 
+        "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 130 Deviation: 13 BGI: -4.38", 
+        "tick": "+0"
+      }
+    }
+  }
+]
