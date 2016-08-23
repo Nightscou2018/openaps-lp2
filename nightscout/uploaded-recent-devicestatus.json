@@ -1,0 +1,36 @@
+[
+  {
+    "device": "openaps://openaps-lp", 
+    "created_at": "2016-08-23T08:48:19.818Z", 
+    "pump": {
+      "battery": {
+        "status": "normal", 
+        "voltage": 1.22
+      }, 
+      "status": {
+        "status": "normal", 
+        "timestamp": "2016-08-23T08:46:06.000Z", 
+        "bolusing": false, 
+        "suspended": false
+      }, 
+      "reservoir": 2.275, 
+      "clock": "2016-08-23T01:44:52"
+    }, 
+    "_id": "57bc0dd35aaf08f3014d8399", 
+    "openaps": {
+      "enacted": {
+        "bg": 189, 
+        "temp": "absolute", 
+        "snoozeBG": 161, 
+        "recieved": true, 
+        "rate": 4, 
+        "reason": "Eventual BG 159>=130, temp 3.5<3.983U/hr", 
+        "eventualBG": 159, 
+        "timestamp": "2016-08-23T07:42:30.000Z", 
+        "duration": 30, 
+        "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 130 Deviation: 21 BGI: -5.18", 
+        "tick": "+4"
+      }
+    }
+  }
+]
