@@ -1,0 +1,25 @@
+[
+  {
+    "device": "openaps://openaps-lp", 
+    "created_at": "2016-08-23T14:31:28.386Z", 
+    "pump": {
+      "clock": "2016-08-23T07:30:10"
+    }, 
+    "_id": "57bc5e4065fee55b08ca660c", 
+    "openaps": {
+      "enacted": {
+        "bg": 80, 
+        "temp": "absolute", 
+        "snoozeBG": -47, 
+        "recieved": true, 
+        "rate": 0, 
+        "reason": "BG 80<90", 
+        "eventualBG": -47, 
+        "timestamp": "2016-08-23T12:07:26.000Z", 
+        "duration": 30, 
+        "mealAssist": "Off: Carbs: undefined Boluses: undefined ISF: 30, Target: 130 Deviation: -127 BGI: -0.09", 
+        "tick": -2
+      }
+    }
+  }
+]
