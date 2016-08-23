@@ -1,34 +1,9 @@
 {
   "device": "openaps://openaps-lp", 
   "pump": {
-    "battery": {
-      "status": "normal", 
-      "voltage": 1.44
-    }, 
-    "status": {
-      "status": "normal", 
-      "timestamp": "2016-08-23T14:16:51.000Z", 
-      "bolusing": false, 
-      "suspended": false
-    }, 
-    "reservoir": 107.7, 
-    "clock": "2016-08-23T07:15:38"
+    "clock": "2016-08-23T07:19:44"
   }, 
   "openaps": {
-    "suggested": [
-      {
-        "msg": "BG data is too old, or clock set incorrectly Tue Aug 23 2016 05:02:44 GMT-0700 (PDT) vs Tue Aug 23 2016 07:18:22 GMT-0700 (PDT)"
-      }
-    ], 
-    "iob": {
-      "netbasalinsulin": -0.95, 
-      "timestamp": "2016-08-23T14:18:11.000Z", 
-      "activity": -0.0074, 
-      "basaliob": -0.422, 
-      "hightempinsulin": 0, 
-      "bolussnooze": 0, 
-      "iob": -0.422
-    }, 
     "enacted": {
       "bg": 80, 
       "temp": "absolute", 
